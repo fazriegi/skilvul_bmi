@@ -42,11 +42,11 @@ function submit() {
   let result = document.getElementById("result");
 
   if (!validateFormData(data)) {
-    result.innerHTML = "Check the form once again!";
+    result.innerHTML = "<p style='color:red'>Check the form once again!</p>";
     return;
   } else {
     let { bmi, status } = checkBMI(data.weight, data.height);
-    result.innerHTML = `Your BMI is <b>${bmi}</b> which means You are <b>${status}</b>`;
+    result.innerHTML = `<p>Your BMI is <b>${bmi}</b> which means You are <b>${status}</b></p>`;
     return;
   }
 }
